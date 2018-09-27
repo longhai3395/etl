@@ -1,6 +1,6 @@
-package com.payegis.tools.datetime;
+package com.czl.tools.datetime;
 
-import com.payegis.tools.util.RegexUtils;
+import com.czl.tools.util.RegexUtils;
 import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
 
@@ -11,14 +11,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * company: 北京通付盾数据科技有限公司
+ * company: **************
  * user: chenzuoli
  * date: 2018/6/13
  * time: 13:07
  * description: 日期转换工具类
  */
 public class DateTimeUtils {
-    private static Logger logger = Logger.getLogger(DateTimeUtils.class);
     public static SimpleDateFormat formatYMDSlash = new SimpleDateFormat("yyyy/MM/dd");
     public static SimpleDateFormat formatYMSlash = new SimpleDateFormat("yyyy/MM");
     public static SimpleDateFormat formatMDY2Slash = new SimpleDateFormat("MM/dd/yy");
@@ -30,6 +29,7 @@ public class DateTimeUtils {
     public static SimpleDateFormat formatYM = new SimpleDateFormat("yyyyMM");
     public static SimpleDateFormat formatY_M_D_HMS = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     public static SimpleDateFormat formatY_M_D_HM = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+    public static SimpleDateFormat formatYMD_HMS = new SimpleDateFormat("yyyyMMdd HH:mm:ss");
     public static SimpleDateFormat formatYMDHMS = new SimpleDateFormat("yyyyMMddHHmmss");
     public static SimpleDateFormat formatY_M_D_HMSMILLS = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
     public static SimpleDateFormat formatYMDChinese = new SimpleDateFormat("yyyy年MM月dd日");
@@ -41,6 +41,7 @@ public class DateTimeUtils {
     public static SimpleDateFormat formatYMDChineseHM = new SimpleDateFormat("yyyy年MM月dd日HH:mm");
     public static SimpleDateFormat formatYMChinese = new SimpleDateFormat("yyyy年MM月");
     public static SimpleDateFormat formatYChinese = new SimpleDateFormat("yyyy年");
+    private static Logger logger = Logger.getLogger(DateTimeUtils.class);
 
     static {
         formatYMDSlash.setLenient(false);//这个的功能是不把1996/13/3 转换为1997/1/3
@@ -54,6 +55,7 @@ public class DateTimeUtils {
         formatYM.setLenient(false);
         formatY_M_D_HMS.setLenient(false);
         formatY_M_D_HM.setLenient(false);
+        formatYMD_HMS.setLenient(false);
         formatYMDHMS.setLenient(false);
         formatY_M_D_HMSMILLS.setLenient(false);
         formatYMDChinese.setLenient(false);
@@ -122,6 +124,8 @@ public class DateTimeUtils {
                 date = formatYMDHMS.parse(dateStr);
             } else if (dateStr.matches(RegexUtils.y_m_d_h_m)) {
                 date = formatY_M_D_HM.parse(dateStr);
+            } else if (dateStr.matches(RegexUtils.ymd_h_m_s)) {
+                date = formatYMD_HMS.parse(dateStr);
             } else if (dateStr.matches(RegexUtils.y_m_d_h_m_s)) {
                 date = formatY_M_D_HMS.parse(dateStr);
             } else if (dateStr.matches(RegexUtils.y_m_d_h_m_s_S)) {
@@ -199,6 +203,12 @@ public class DateTimeUtils {
             }
             Pattern y_m_d_h_m_sPattern = Pattern.compile(RegexUtils.y_m_d_h_m_sRegex);
             matcher = y_m_d_h_m_sPattern.matcher(str);
+            if (matcher.find()) {
+                returnStr = matcher.group();
+                return returnStr;
+            }
+            Pattern ymd_h_m_sPattern = Pattern.compile(RegexUtils.ymd_h_m_sRegex);
+            matcher = ymd_h_m_sPattern.matcher(str);
             if (matcher.find()) {
                 returnStr = matcher.group();
                 return returnStr;
@@ -342,6 +352,8 @@ public class DateTimeUtils {
             return formatY_M_D_HM;
         } else if (dateStr.matches(RegexUtils.y_m_d_h_m_s)) {
             return formatY_M_D_HMS;
+        } else if (dateStr.matches(RegexUtils.ymd_h_m_s)) {
+            return formatYMD_HMS;
         } else if (dateStr.matches(RegexUtils.y_m_d_h_m_s_S)) {
             return formatY_M_D_HMSMILLS;
         } else if (dateStr.matches(RegexUtils.mdy2Slash)) {
@@ -407,6 +419,8 @@ public class DateTimeUtils {
         } else if (dateStr.matches(RegexUtils.y_m_d_h_m)) {
             return formatY_M_D_HM;
         } else if (dateStr.matches(RegexUtils.y_m_d_h_m_s)) {
+            return formatY_M_D_HMS;
+        } else if (dateStr.matches(RegexUtils.ymd_h_m_s)) {
             return formatY_M_D_HMS;
         } else if (dateStr.matches(RegexUtils.y_m_d_h_m_s_S)) {
             return formatY_M_D_HMSMILLS;
