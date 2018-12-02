@@ -1,4 +1,4 @@
-package com.czl.tools.db;
+package com.payegis.tools.db;
 
 import org.apache.commons.dbcp2.BasicDataSourceFactory;
 import org.apache.log4j.Logger;
