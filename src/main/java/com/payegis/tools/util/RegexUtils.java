@@ -56,6 +56,7 @@ public class RegexUtils {
     public final static String y_m_d_h_mRegex = "(\\d{4}-\\d{1,2}-\\d{1,2}\\s\\d{1,2}:\\d{1,2})";
     public final static String ymdhmsRegex = "(\\d{9,14})"; // 年月日时分秒
     public final static String y_m_d_h_m_s_SRegex = "(\\d{4}-\\d{1,2}-\\d{1,2}\\s\\d{1,2}:\\d{1,2}:\\d{1,2}\\.\\d{1,3})"; // 年-月-日 时:分:秒.毫秒
+    public final static String ymd_h_m_sRegex = "(\\d{4}\\d{1,2}\\d{1,2}\\s\\d{1,2}:\\d{1,2}:\\d{1,2})"; // 年月日 时:分:秒
     public final static String ymdchineseRegex = "(\\d{4}年\\d{1,2}月\\d{1,2}日)";
     public final static String ymdblankhmschineseRegex = "(\\d{4}年\\d{1,2}月\\d{1,2}日\\s\\d{1,2}时\\d{1,2}分\\d{1,2}秒)";
     public final static String ymdhmschineseRegex = "(\\d{4}年\\d{1,2}月\\d{1,2}日\\d{1,2}时\\d{1,2}分\\d{1,2}秒)";
@@ -75,6 +76,7 @@ public class RegexUtils {
     public final static String ymd = "\\d{6,8}";
     public final static String ym = "\\d{5,6}";
     public final static String y_m_d_h_m_s = "\\d{4}-\\d{1,2}-\\d{1,2}\\s\\d{1,2}:\\d{1,2}:\\d{1,2}";
+    public final static String ymd_h_m_s = "\\d{6,8}\\s\\d{1,2}:\\d{1,2}:\\d{1,2}";
     public final static String y_m_d_h_m = "\\d{4}-\\d{1,2}-\\d{1,2}\\s\\d{1,2}:\\d{1,2}";
     public final static String ymdhms = "\\d{9,14}";
     public final static String y_m_d_h_m_s_S = "\\d{4}-\\d{1,2}-\\d{1,2}\\s\\d{1,2}:\\d{1,2}:\\d{1,2}\\.\\d{1,3}";

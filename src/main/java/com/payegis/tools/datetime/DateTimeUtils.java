@@ -1,6 +1,6 @@
-package com.czl.tools.datetime;
+package com.payegis.tools.datetime;
 
-import com.czl.tools.util.RegexUtils;
+import com.payegis.tools.util.RegexUtils;
 import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
 
