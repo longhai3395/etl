@@ -14,7 +14,7 @@ import java.io.Serializable;
 import java.net.URI;
 
 /**
- * company: 北京通付盾数据科技有限公司
+ * company:
  * user: chenzuoli
  * date: 2018/5/17 13:04
  * description: hdfs工具类

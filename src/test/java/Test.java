@@ -2,7 +2,7 @@ import com.payegis.tools.personal.IdCardUtils;
 import org.apache.log4j.Logger;
 
 /**
- * company: 北京通付盾数据科技有限公司
+ * company:
  * user: chenzuoli
  * date: 2018/7/18 11:05
  * description: 测试类

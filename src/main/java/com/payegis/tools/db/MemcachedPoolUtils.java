@@ -7,7 +7,7 @@ import org.apache.log4j.Logger;
 import java.io.Serializable;
 
 /**
- * company: 北京通付盾数据科技有限公司
+ * company:
  * user: chenzuoli
  * date: 2018/6/7
  * time: 18:42

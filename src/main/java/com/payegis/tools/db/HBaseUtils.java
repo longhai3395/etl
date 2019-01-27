@@ -19,7 +19,7 @@ import java.io.*;
 import java.util.*;
 
 /**
- * Company: 北京通付盾数据科技有限公司
+ * Company:
  * User: 陈作立
  * Date: 2018/3/29 9:20
  * Description: Java操作HBase工具类

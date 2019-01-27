@@ -9,7 +9,7 @@ import org.apache.log4j.Logger;
 import java.util.*;
 
 /**
- * Company: 北京通付盾数据科技有限公司
+ * Company:
  * User: 陈作立
  * Date: 2018/4/10
  * Time: 10:24

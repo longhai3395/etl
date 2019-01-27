@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * company: 北京通付盾数据科技有限公司
+ * company:
  * user: chenzuoli
  * date: 2018/6/19
  * time: 9:20

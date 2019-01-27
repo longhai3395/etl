@@ -9,7 +9,7 @@ import java.io.Serializable;
 import java.util.Properties;
 
 /**
- * Company: 北京通付盾数据科技有限公司
+ * Company:
  * User: chenzuoli
  * Date: 2018/4/27
  * Time: 10:13

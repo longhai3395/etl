@@ -3,7 +3,7 @@ package com.payegis.tools.util;
 import org.apache.log4j.Logger;
 
 /**
- * company: 北京通付盾数据科技有限公司
+ * company:
  * user: chenzuoli
  * date: 2018/5/25
  * time: 16:52

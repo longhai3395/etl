@@ -7,7 +7,7 @@ import sun.misc.BASE64Encoder;
 import java.io.*;
 
 /**
- * company: 北京通付盾数据科技有限公司
+ * company:
  * user: chenzuoli
  * date: 2018/5/24
  * time: 13:28

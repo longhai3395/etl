@@ -11,7 +11,7 @@ import java.sql.*;
 import java.util.*;
 
 /**
- * Company: 北京通付盾数据科技有限公司
+ * Company:
  * User: chenzuoli
  * Date: 2018/4/27 10:52
  * Description: 动态获取外部配置文件中的jdbc连接参数，加载数据库连接池工具类

@@ -4,7 +4,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * Company: 北京通付盾数据科技有限公司
+ * Company:
  * User: 陈作立
  * Date: 2018/3/12
  * Time: 16:32

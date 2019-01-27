@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Set;
 
 /**
- * company: 北京通付盾数据科技有限公司
+ * company:
  * user: chenzuoli
  * date: 2018/6/15
  * time: 8:59

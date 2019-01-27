@@ -7,7 +7,7 @@ import org.apache.log4j.Logger;
 import java.util.HashMap;
 
 /**
- * Company: 北京通付盾数据科技有限公司
+ * Company:
  * User: chenzuoli
  * Date: 2018/4/23 14:29
  * Description: 手机号工具类

@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Properties;
 
 /**
- * company: 北京通付盾数据科技有限公司
+ * company:
  * user: chenzuoli
  * date: 2018/5/16
  * time: 10:35

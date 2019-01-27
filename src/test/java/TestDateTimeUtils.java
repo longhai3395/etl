@@ -2,7 +2,7 @@ import com.payegis.tools.datetime.DateTimeUtils;
 import org.apache.log4j.Logger;
 
 /**
- * company: 北京通付盾数据科技有限公司
+ * company:
  * user: chenzuoli
  * date: 2018/6/14
  * time: 13:41
