@@ -1,5 +1,5 @@
-import com.payegis.tools.file.FileDivisionETL;
-import com.payegis.tools.string.StringUtils;
+import top.wetech.tools.file.FileDivisionETL;
+import top.wetech.tools.string.StringUtils;
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;

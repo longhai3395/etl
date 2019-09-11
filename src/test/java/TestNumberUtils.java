@@ -1,4 +1,4 @@
-import com.payegis.tools.string.NumberUtils;
+import top.wetech.tools.string.NumberUtils;
 import org.apache.log4j.Logger;
 
 /**

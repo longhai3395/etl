@@ -1,4 +1,4 @@
-import com.payegis.tools.personal.PhoneUtils;
+import top.wetech.tools.personal.PhoneUtils;
 import org.apache.log4j.Logger;
 
 /**
