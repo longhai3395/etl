@@ -51,6 +51,7 @@ public class HalfSplitSearch {
      * @param array 被查找的数组
      * @param search_key 被查找的key
      * @return 返回查找到的数组下标，找不到返回-1
+     * 这种方法比递归方式更优的地方在于main方法不需要知道传递的lowerBound和upperBound是什么意思，怎么传值，只需要传递有序的数组和需要查找的值就行；
      */
     private static int find(int[] array, int search_key) {
         int lowerBound = 0;
