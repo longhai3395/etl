@@ -1,9 +1,9 @@
 package top.wetech.tools.personal;
 
+import org.apache.log4j.Logger;
 import top.wetech.tools.datetime.DateTimeUtils;
 import top.wetech.tools.string.NumberUtils;
 import top.wetech.tools.util.RegexUtils;
-import org.apache.log4j.Logger;
 
 import java.text.ParseException;
 import java.util.*;
@@ -25,6 +25,8 @@ import java.util.*;
 public class IdCardUtils {
     public static Map<Integer, String> zoneNum = new HashMap<>();
     private static Logger logger = Logger.getLogger(IdCardUtils.class);
+    private static int[] PARITYBIT = {'1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2'};
+    private static int[] POWER_LIST = {7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2};
 
     static {
         zoneNum.put(11, "北京");
@@ -63,9 +65,6 @@ public class IdCardUtils {
         zoneNum.put(82, "澳门");
         zoneNum.put(91, "外国");
     }
-
-    private static int[] PARITYBIT = {'1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2'};
-    private static int[] POWER_LIST = {7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2};
 
     /**
      * description: 身份证验证，null和"" 都是false

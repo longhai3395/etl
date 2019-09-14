@@ -15,7 +15,7 @@ import java.util.Properties;
  * Date: 2018/3/13
  * Time: 9:36
  */
-public class MongoDBReplsetUtils implements Serializable{
+public class MongoDBReplsetUtils implements Serializable {
     private static MongoDBReplsetUtils mongoDBReplsetUtils;
     public Properties props;
     public MongoDatabase mongoDatabase;

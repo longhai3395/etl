@@ -1,5 +1,5 @@
-import top.wetech.tools.personal.IdCardUtils;
 import org.apache.log4j.Logger;
+import top.wetech.tools.personal.IdCardUtils;
 
 /**
  * company:

@@ -10,7 +10,6 @@ import org.apache.log4j.Logger;
  * description: 字符转换控制工具类
  */
 public class CharacterUtils {
-    private static Logger logger = Logger.getLogger(CharacterUtils.class);
     private static final char DBC_CHAR_START = 33; // 半角!
     private static final char DBC_CHAR_END = 126; // 半角~
     private static final char SBC_CHAR_START = 65281; // 全角！
@@ -26,6 +25,7 @@ public class CharacterUtils {
     private static final char SBC_CHAR_UPPERCASE_END = 90 + 65248; // 全角大写字母Z
     private static final char SBC_CHAR_LOWERCASE_START = 97 + 65248; // 全角小写字母a
     private static final char SBC_CHAR_LOWERCASE_END = 122 + 65248; // 全角小写字母z
+    private static Logger logger = Logger.getLogger(CharacterUtils.class);
 
     /**
      * description:  半角字符->全角字符转换,只处理空格，!到˜之间的字符，忽略其他
@@ -94,9 +94,9 @@ public class CharacterUtils {
             if (ca[i] >= SBC_NUMBER_START && ca[i] <= SBC_NUMBER_END) { // 如果位于全角0-9区间内
                 buf.append((char) (ca[i] - CONVERT_STEP));
             } else if (ca[i] >= SBC_CHAR_LOWERCASE_START && ca[i] <= SBC_CHAR_LOWERCASE_END) {
-                buf.append((char)(ca[i] - CONVERT_STEP));
+                buf.append((char) (ca[i] - CONVERT_STEP));
             } else if (ca[i] >= SBC_CHAR_UPPERCASE_START && ca[i] <= SBC_CHAR_UPPERCASE_END) {
-                buf.append((char)(ca[i] - CONVERT_STEP));
+                buf.append((char) (ca[i] - CONVERT_STEP));
             } else {
                 buf.append(ca[i]);
             }

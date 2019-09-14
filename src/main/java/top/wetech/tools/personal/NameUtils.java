@@ -1,7 +1,7 @@
 package top.wetech.tools.personal;
 
-import top.wetech.tools.util.RegexUtils;
 import org.apache.log4j.Logger;
+import top.wetech.tools.util.RegexUtils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

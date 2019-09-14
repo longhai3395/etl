@@ -1,6 +1,6 @@
-import top.wetech.tools.string.StringUtils;
 import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
+import top.wetech.tools.string.StringUtils;
 
 /**
  * company:
@@ -16,7 +16,7 @@ public class TestStringUtils {
         t1();
     }
 
-    private static void t1(){
+    private static void t1() {
         String str1 = "ｓｅｆｅａ１２３５daefw23r3";
         String str2 = "null";
         String str3 = "ｎｕｌl";
@@ -28,7 +28,7 @@ public class TestStringUtils {
         System.out.println(s3);
     }
 
-    private static void t2(){
+    private static void t2() {
         String str = "null";
         boolean b = StringUtils.checkValidJsonObjectStr(str);
         System.out.println(b);

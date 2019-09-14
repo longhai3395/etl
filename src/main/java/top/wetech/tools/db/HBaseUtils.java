@@ -1,7 +1,5 @@
 package top.wetech.tools.db;
 
-import top.wetech.tools.encrypt.MD5Utils;
-import top.wetech.tools.util.ExternalPropertyUtils;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.sf.json.JSONObject;
 import org.apache.hadoop.conf.Configuration;
@@ -14,6 +12,8 @@ import org.apache.hadoop.hbase.filter.*;
 import org.apache.hadoop.hbase.io.compress.Compression;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.log4j.Logger;
+import top.wetech.tools.encrypt.MD5Utils;
+import top.wetech.tools.util.ExternalPropertyUtils;
 
 import java.io.*;
 import java.util.*;
@@ -25,12 +25,15 @@ import java.util.*;
  * Description: Java操作HBase工具类
  * Ps: Java HBase
  */
-public class HBaseUtils implements Serializable{
+public class HBaseUtils implements Serializable {
     public static Configuration conf;
     public static Connection connection;
     public static Admin admin;
     public static Properties props;
     private static Logger logger = Logger.getLogger(HBaseUtils.class);
+
+    private HBaseUtils() {
+    }
 
     /**
      * description: 获取HBaseUtils工具类的实例，传递连接hbase配置文件路径作为参数
@@ -39,7 +42,7 @@ public class HBaseUtils implements Serializable{
      * date: 2018/6/13
      * time: 14:23
      */
-    public static HBaseUtils getInstance(String profilePath){
+    public static HBaseUtils getInstance(String profilePath) {
         try {
             ExternalPropertyUtils instance = ExternalPropertyUtils.getInstance(profilePath);
             props = instance.props;
@@ -54,8 +57,6 @@ public class HBaseUtils implements Serializable{
         }
         return new HBaseUtils();
     }
-
-    private HBaseUtils(){}
 
     /**
      * Description: 获取hbase Configuration对象
@@ -400,7 +401,7 @@ public class HBaseUtils implements Serializable{
             rowMapList.add(resolveResult(r));
             logger.info("获得到rowkey: " + new String(r.getRow()));
         } catch (IOException e) {
-            logger.error("get hbase table " + tableName + "'s rowkey " + rowKey  + " exception!", e);
+            logger.error("get hbase table " + tableName + "'s rowkey " + rowKey + " exception!", e);
         } finally {
             closeTableAndResult(table, null);
         }

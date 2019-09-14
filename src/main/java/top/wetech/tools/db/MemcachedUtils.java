@@ -9,9 +9,13 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
-public class MemcachedUtils implements Serializable{
+public class MemcachedUtils implements Serializable {
     private static Logger logger = Logger.getLogger(MemcachedUtils.class);
     private MemcachedClient memcachedClient = null;
+
+    public MemcachedUtils(String host, int port) {
+        getMemcachedClient(host, port);
+    }
 
     public void destroyMemcached() {
         if (memcachedClient != null) {
@@ -101,10 +105,6 @@ public class MemcachedUtils implements Serializable{
             }
         }
         return memcachedClient;
-    }
-
-    public MemcachedUtils(String host, int port) {
-        getMemcachedClient(host, port);
     }
 
     public void delete(String key) {

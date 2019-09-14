@@ -19,7 +19,7 @@ import java.net.URI;
  * date: 2018/5/17 13:04
  * description: hdfs工具类
  */
-public class HDFSUtils implements Serializable{
+public class HDFSUtils implements Serializable {
     private static Logger logger = Logger.getLogger(HDFSUtils.class);
 
     /**
@@ -208,19 +208,19 @@ public class HDFSUtils implements Serializable{
     }
 
     /**
-    * description: 判断hdfs中是否存在该路径
-    * param: [conf, hdfsFilePath]
-    * return: boolean
-    * date: 2018/5/18
-    * time: 13:52
-    */
-    public static boolean hdfsFileExists(Configuration conf, String hdfsFilePath){
+     * description: 判断hdfs中是否存在该路径
+     * param: [conf, hdfsFilePath]
+     * return: boolean
+     * date: 2018/5/18
+     * time: 13:52
+     */
+    public static boolean hdfsFileExists(Configuration conf, String hdfsFilePath) {
         boolean isExists = false;
         logger.info("check hdfs file " + hdfsFilePath + " is exists or not!");
         try {
             FileSystem fs = FileSystem.get(conf);
             isExists = fs.exists(new Path(hdfsFilePath));
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error("check hdfs file " + hdfsFilePath + " is exists or not exception!", e);
         }
         return isExists;

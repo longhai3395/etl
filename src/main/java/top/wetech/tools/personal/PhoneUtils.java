@@ -1,8 +1,8 @@
 package top.wetech.tools.personal;
 
+import org.apache.log4j.Logger;
 import top.wetech.tools.string.NumberUtils;
 import top.wetech.tools.util.RegexUtils;
-import org.apache.log4j.Logger;
 
 import java.util.HashMap;
 
@@ -13,9 +13,9 @@ import java.util.HashMap;
  * Description: 手机号工具类
  */
 public class PhoneUtils {
+    public static String[] phonePrefixs;
     private static Logger logger = Logger.getLogger(PhoneUtils.class);
     private static HashMap<String, String> phoneMap = new HashMap<>();
-    public static String[] phonePrefixs;
 
     static {
         phoneInit();

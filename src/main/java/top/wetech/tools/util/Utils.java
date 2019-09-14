@@ -1,11 +1,11 @@
 package top.wetech.tools.util;
 
+import net.sf.json.JSONObject;
+import org.apache.log4j.Logger;
 import top.wetech.tools.datetime.DateTimeUtils;
 import top.wetech.tools.db.ExternalDBCPUtils;
 import top.wetech.tools.encrypt.*;
 import top.wetech.tools.string.NumberUtils;
-import net.sf.json.JSONObject;
-import org.apache.log4j.Logger;
 
 import java.io.*;
 import java.util.*;
@@ -329,10 +329,10 @@ public class Utils {
             if (br != null) {
                 br.close();
             }
-            if (os != null){
+            if (os != null) {
                 os.close();
             }
-            if (bw != null){
+            if (bw != null) {
                 bw.close();
             }
         } catch (IOException e) {
@@ -426,7 +426,7 @@ public class Utils {
      */
     public static JSONObject getRecentMutiLoanTime(JSONObject timeJ1, JSONObject timeJ2) {
         JSONObject recentTimeJ = new JSONObject();
-        try{
+        try {
             String time1 = timeJ1.optString("b");
             String time2 = timeJ2.optString("b");
             String range1 = timeJ1.optString("k");
@@ -458,7 +458,7 @@ public class Utils {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error("get recent time exception, one is " + timeJ1 + ", another is " + timeJ2, e);
         }
         return recentTimeJ;
@@ -493,7 +493,7 @@ public class Utils {
      */
     public static JSONObject getRecentOverdueTime(JSONObject timeJ1, JSONObject timeJ2) {
         JSONObject recentTimeJ = new JSONObject();
-        try{
+        try {
             String time1 = timeJ1.optString("g");
             String time2 = timeJ2.optString("g");
             String range1 = timeJ1.optString("l");
@@ -528,7 +528,7 @@ public class Utils {
             if ("".equals(recentTimeJ.optString("l"))) {
                 recentTimeJ.put("l", "z");
             }
-        } catch (Exception e){
+        } catch (Exception e) {
             logger.error("get recent time exception, one is " + timeJ1 + ", another is " + timeJ2, e);
         }
         return recentTimeJ;

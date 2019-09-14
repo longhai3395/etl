@@ -1,7 +1,7 @@
 package top.wetech.tools.string;
 
-import top.wetech.tools.util.RegexUtils;
 import org.apache.log4j.Logger;
+import top.wetech.tools.util.RegexUtils;
 
 import java.math.BigDecimal;
 import java.util.regex.Matcher;

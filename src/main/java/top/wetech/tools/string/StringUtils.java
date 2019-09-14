@@ -1,12 +1,15 @@
 package top.wetech.tools.string;
 
-import top.wetech.tools.encrypt.MD5Utils;
-import top.wetech.tools.util.RegexUtils;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.apache.log4j.Logger;
+import top.wetech.tools.encrypt.MD5Utils;
+import top.wetech.tools.util.RegexUtils;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
  * Company:

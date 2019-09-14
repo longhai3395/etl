@@ -1,4 +1,0 @@
-2018-06-29 14:55:14 INFO  [main] com.payegis.tools.algorithm.SortUtils.selectSort(27) - before select sort: [I@7006c658
-2018-06-29 14:55:14 INFO  [main] com.payegis.tools.algorithm.SortUtils.selectSort(37) - after select sort: [I@7006c658
-2018-06-29 14:55:47 INFO  [main] com.payegis.tools.algorithm.SortUtils.selectSort(29) - before select sort: [[I@7006c658]
-2018-06-29 14:55:47 INFO  [main] com.payegis.tools.algorithm.SortUtils.selectSort(39) - after select sort: [[I@7006c658]

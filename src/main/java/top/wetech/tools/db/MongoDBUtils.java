@@ -5,8 +5,8 @@ import com.mongodb.MongoClientOptions;
 import com.mongodb.MongoCredential;
 import com.mongodb.ServerAddress;
 import com.mongodb.client.MongoDatabase;
-import top.wetech.tools.util.ExternalPropertyUtils;
 import org.apache.log4j.Logger;
+import top.wetech.tools.util.ExternalPropertyUtils;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -20,11 +20,11 @@ import java.util.Properties;
  * time: 10:35
  * description: 连接mongodb工具类，通过传入配置文件获得MongoDatabase
  */
-public class MongoDBUtils implements Serializable{
-    private static Logger logger = Logger.getLogger(MongoDBUtils.class);
+public class MongoDBUtils implements Serializable {
     public static Properties props;
-    private static MongoClient client;
     public static MongoDatabase db;
+    private static Logger logger = Logger.getLogger(MongoDBUtils.class);
+    private static MongoClient client;
 
     private MongoDBUtils(String filePath) {
         try {

@@ -1,7 +1,7 @@
 package top.wetech.tools.file;
 
-import top.wetech.tools.util.ColumnValueEtl;
 import org.apache.log4j.Logger;
+import top.wetech.tools.util.ColumnValueEtl;
 
 import java.util.ArrayList;
 import java.util.Set;
@@ -54,7 +54,7 @@ public class FileDivisionETL {
         Set<String> lineSet = FileUtils.readFileDeduplication(filePath);
         lineSet.forEach(line -> {
             String[] columns;
-            if ("$".equals(delimiter)){
+            if ("$".equals(delimiter)) {
                 columns = line.split("[$]");
             } else {
                 columns = line.split(delimiter);

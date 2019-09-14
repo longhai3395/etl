@@ -13,7 +13,7 @@ import java.io.Serializable;
  * time: 18:42
  * description: memcached 连接池工具类
  */
-public class MemcachedPoolUtils implements Serializable{
+public class MemcachedPoolUtils implements Serializable {
     private static Logger logger = Logger.getLogger(MemcachedPoolUtils.class);
     private static MemCachedClient cachedClient;
 

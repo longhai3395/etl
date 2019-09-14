@@ -1,8 +1,8 @@
 package top.wetech.tools.file;
 
-import top.wetech.tools.util.Utils;
 import org.apache.log4j.Logger;
 import org.apache.tika.Tika;
+import top.wetech.tools.util.Utils;
 
 import java.io.*;
 import java.util.*;
@@ -44,11 +44,11 @@ public class FileUtils {
     }
 
     /**
-    * description: tika读取文件，返回行集合
-    * param: [filePath]
-    * return: java.util.Set<java.lang.String>
-    * time: 2018/6/19 11:27
-    */
+     * description: tika读取文件，返回行集合
+     * param: [filePath]
+     * return: java.util.Set<java.lang.String>
+     * time: 2018/6/19 11:27
+     */
     public static Set<String> readFileDeDuplByTika(String filePath) {
         Set<String> lineSet = new HashSet<>();
         readFileByTika(filePath, lineSet);

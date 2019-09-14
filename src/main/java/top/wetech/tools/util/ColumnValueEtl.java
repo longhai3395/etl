@@ -1,5 +1,6 @@
 package top.wetech.tools.util;
 
+import org.apache.log4j.Logger;
 import top.wetech.tools.datetime.DateTimeUtils;
 import top.wetech.tools.encrypt.Base64;
 import top.wetech.tools.encrypt.MD5Utils;
@@ -9,7 +10,6 @@ import top.wetech.tools.personal.NameUtils;
 import top.wetech.tools.personal.PhoneUtils;
 import top.wetech.tools.string.NumberUtils;
 import top.wetech.tools.string.StringUtils;
-import org.apache.log4j.Logger;
 
 /**
  * company:

@@ -1,8 +1,8 @@
 package top.wetech.tools.db;
 
-import top.wetech.tools.util.ExternalPropertyUtils;
 import org.apache.commons.dbcp2.BasicDataSourceFactory;
 import org.apache.log4j.Logger;
+import top.wetech.tools.util.ExternalPropertyUtils;
 
 import javax.sql.DataSource;
 import java.io.IOException;

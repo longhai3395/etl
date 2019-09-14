@@ -10,24 +10,19 @@ import org.apache.log4j.Logger;
  * description: 正则表达式工具类
  */
 public class RegexUtils {
-    private static Logger logger = Logger.getLogger(RegexUtils.class);
-
     public final static String blankRegex = "\\s*|\t|\r|\n"; // 空白字符正则
-
     /**
      * 个人信息正则
      */
     public final static String nameRegex = "[\\u4e00-\\u9fa5]+·?[\\u4e00-\\u9fa5]+"; // 中文姓名正则
     public final static String phoneRegex = "^[+]?(?:\\s*8\\s*6)?\\s*1\\s*[3|4|5|6|7|8|9]\\s*(?:\\d\\s*){9}\\s*$"; // 中国移动手机号正则
     public final static String idCardRegex = "(\\d{15})|(\\d{18})|(\\d{17}[xX]{1})"; // 身份证号正则
-
     /**
      * 数值正则
      */
     public final static String intRegex = "-?\\d+"; // 整数正则
     public final static String floatRegex = "-?\\d+\\.\\d+"; // 浮点数正则
     public final static String numberRegex = "-?\\d+(\\.\\d+)?"; // 数值正则
-
     /**
      * 金钱正则
      */
@@ -39,7 +34,6 @@ public class RegexUtils {
     public final static String millionMoneyRegex = "([\\d\\.]+百万)";
     public final static String tenMillionMoneyRegex = "([\\d\\.]+千万)";
     public final static String billionMoneyRegex = "([\\d\\.]+亿)";
-
     /**
      * 日期时间正则
      */
@@ -89,5 +83,6 @@ public class RegexUtils {
     public final static String ymdchinesehm = "\\d{4}年\\d{1,2}月\\d{1,2}日\\d{1,2}:\\d{1,2}";
     public final static String ymchinese = "\\d{4}年\\d{2}月";
     public final static String ychinese = "\\d{4}年";
+    private static Logger logger = Logger.getLogger(RegexUtils.class);
 
 }

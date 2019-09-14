@@ -25,6 +25,18 @@ public class ExternalPropertyUtils implements Serializable {
     }
 
     /**
+     * description: 获取ExternalPropertyUtils工具类实例，传递配置文件路径
+     * param: [filePath]
+     * return: ExternalPropertyUtils
+     * date: 2018/6/13
+     * time: 15:47
+     */
+    public static ExternalPropertyUtils getInstance(String filePath) {
+        ExternalPropertyUtils externalPropertyUtils = new ExternalPropertyUtils(filePath);
+        return externalPropertyUtils;
+    }
+
+    /**
      * Description: 读取配置文件
      * Param: [fileName]
      * Return: void
@@ -52,18 +64,6 @@ public class ExternalPropertyUtils implements Serializable {
                 }
             }
         }
-    }
-
-    /**
-     * description: 获取ExternalPropertyUtils工具类实例，传递配置文件路径
-     * param: [filePath]
-     * return: ExternalPropertyUtils
-     * date: 2018/6/13
-     * time: 15:47
-     */
-    public static ExternalPropertyUtils getInstance(String filePath) {
-        ExternalPropertyUtils externalPropertyUtils = new ExternalPropertyUtils(filePath);
-        return externalPropertyUtils;
     }
 
 }

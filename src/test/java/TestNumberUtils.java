@@ -1,5 +1,5 @@
-import top.wetech.tools.string.NumberUtils;
 import org.apache.log4j.Logger;
+import top.wetech.tools.string.NumberUtils;
 
 /**
  * company:
@@ -37,7 +37,7 @@ public class TestNumberUtils {
         System.out.println(NumberUtils.transformFloatStrToInt(String.valueOf(d2)));
     }
 
-    private static void t3(){
+    private static void t3() {
         String floatStr = "1.00";
         System.out.println(NumberUtils.transformFloatStrToIntStr(floatStr));
     }
