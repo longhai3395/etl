@@ -11,7 +11,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <apache.httpclient.version>4.4.1</apache.httpclient.version>
+        <apache.httpclient.version>4.5.13</apache.httpclient.version>
         <hbase.version>1.4.1</hbase.version>
         <zookeeper.version>3.4.14</zookeeper.version>
         <tika.version>1.22</tika.version>
